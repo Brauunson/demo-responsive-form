@@ -1,1 +1,145 @@
-/* dev styles go here */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inner-container{
+    padding: 1rem;
+}
+
+    /* --- Typography --- */
+
+h2,
+h3{
+    color: tomato;
+    text-transform: uppercase;
+    font-size: 3.75rem;
+    font-weight: 200;
+}
+
+h3{
+    font-size: 2.8rem;
+}
+
+p{
+    margin-bottom: 1.5rem;
+}
+
+    /* --- Header --- */
+header{
+    background-color: black;
+}
+
+header svg{
+    fill: #f5f5f5;
+}
+
+.menu a{
+    color: #f5f5f5;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu a:hover,
+.menu a:active{
+    color: tomato;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.menu li{
+    flex: 1 0 calc(50% - 1rem);
+    /* flex shorthand as follows: flex-grow, flex-shrink, content width */
+}
+
+    /* --- Form --- */
+fieldset{
+    border: none;
+    padding: 0;
+}
+
+label{
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.875rem;
+}
+
+form div{
+    margin-bottom: 1.5rem;
+}
+
+input,
+textarea{
+    width: 100%;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 7px lightgray;
+}
+
+textarea{
+    resize: vertical;
+    min-height: 300px;
+}
+
+/* -- Attribute selector - GREAT for forms -- */
+
+input[type="checkbox"]{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+label[for="accept"]{
+    font-size: 1rem;
+}
+
+input[type="submit"]{
+    width: unset;
+    border: none;
+    background-color: #fff;
+    box-shadow: none;
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: padding-left 1s ease;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    color: tomato;
+    padding-left: 20px;
+}
+
+@media screen and (min-width:1260px) {
+    .menu li{
+        flex: 0;
+    }
+
+    fieldset{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+
+    fieldset div{
+        flex: 1 0 calc(50% - 3rem);
+    }
+
+    h3{
+        width: 100%;
+    }
+
+    textarea{
+        width: calc(50% - 1.5rem);
+    }
+
+    .inner-container{
+    padding: 1rem 0;
+    max-width: 75rem;
+    margin: 0 auto;
+    }
+}
